@@ -15,8 +15,17 @@ jobs:
       with:
         node-version: '14'
 
+    - name: Change to docker directory
+      run: cd docker
+
     - name: Install dependencies
       run: npm install
+      working-directory: ./docker
+
+    - name: Verify Jest installation
+      run: npx jest --version
+      working-directory: ./docker
 
     - name: Run tests
       run: npm test
+      working-directory: ./docker
