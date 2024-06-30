@@ -21,6 +21,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
+
     - name: Run EC2 script
       run: |
         chmod +x ./aws/prueba_aws.sh
